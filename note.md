@@ -1,4 +1,4 @@
-# loop
+## loop
 
 there are while, do while, for each in other languages
 
@@ -30,8 +30,17 @@ for _, booking := range bookings {
 
 
 
-# unused variables
+## unused variables
 
 in go, if you define a variable but don't use it it throws an error
 
 if you want to define an unused variable: use _
+
+
+## export function
+
+if you want your function to be used in other file, you can capitalize the first letter of the function name, then it'll be automatically exported.
+
+and you can do the same with variables
+
+you capitalize the first letter and it'll be automatically exported
