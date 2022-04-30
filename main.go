@@ -9,6 +9,10 @@ import (
 )
 
 func main() {
+	// vertex
+	v := foooox.Vertex{3, 4}
+	fmt.Println(v.Abs())
+
 	// var conferenceName = "go conference"
 	// there are 2 ways to define a variable: var .. = or :==
 	conferenceName := "go conference"
