@@ -85,6 +85,30 @@ https://stackoverflow.com/questions/61845013/package-xxx-is-not-in-goroot-when-b
 -v
 go test -v /Users/foooox/go_learning_booking_app/go_learning_booking_app/interface_learning/interface_learning_test.go
 
-## export fun 
+## export func
 
-如果你要使用你在package里自定义的fun 要把首字母大写（自动export fun）
+如果你要使用你在package里自定义的func 要把首字母大写（自动export func）
+
+## map
+
+https://www.cnblogs.com/techflow/p/13029461.html
+
+声明
+
+map[keyType]valueType
+
+初始化
+m = make(map[keyType] valueType)
+
+
+有两个关键点：map 是由 key-value 对组成的；key 只会出现一次。
+
+和 map 相关的操作主要是：
+
+增加一个 k-v 对 —— Add or insert；
+
+删除一个 k-v 对 —— Remove or delete；
+
+修改某个 k 对应的 v —— Reassign；
+
+查询某个 k 对应的 v —— Lookup；
