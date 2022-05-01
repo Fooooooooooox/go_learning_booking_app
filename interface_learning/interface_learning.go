@@ -25,9 +25,17 @@ func (c Circle) area() float64 {
 	return math.Pi * c.radius * c.radius
 }
 
-func Interface() []Shape {
+func GetArea(s Shape) float64 {
+	return s.area()
+}
+
+func GetAreas() []float64 {
 	c1 := Circle{4.5}
 	r1 := Rect{1, 2}
 	Shapes := []Shape{c1, r1}
-	return Shapes
+	var areas []float64
+	for _, shape := range Shapes {
+		areas = append(areas, GetArea(shape))
+	}
+	return areas
 }

@@ -7,6 +7,7 @@ import (
 )
 
 func TestInterface(t *testing.T) {
-	TestRes := interface_learning.Interface()
-	t.Log(TestRes)
+	t.Log("hhhhh")
+	TestAreas := interface_learning.GetAreas()
+	t.Log(TestAreas)
 }
