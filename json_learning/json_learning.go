@@ -27,7 +27,8 @@ func Students() string {
 		Name: "ali",
 		Age:  20,
 		HIgn: true,
-		sex:  "male",
+		// sex 首字母没有大写 在生成json的时候是无法导出的
+		sex: "male",
 	}
 
 	cla := new(Class)
@@ -41,5 +42,42 @@ func Students() string {
 		return "something went wrong"
 	}
 	return string(jsonStu)
+
+}
+
+// 在json中使用interface 会让json变得特别灵活
+
+type Stu_i struct {
+	Name  interface{} `json:"name"`
+	Age   interface{}
+	HIgh  interface{}
+	sex   interface{}
+	Class interface{} `json:"class"`
+}
+
+type Class_i struct {
+	Name  string
+	Grade int
+}
+
+func Students_i() string {
+	stu_i := Stu_i{
+		Name: "ali",
+		Age:  20,
+		HIgh: true,
+		sex:  "male",
+	}
+
+	cla_i := new(Class_i)
+	cla_i.Name = "first class"
+	cla_i.Grade = 3
+	stu_i.Class = cla_i
+
+	jsonStu_i, err := json.Marshal(stu_i)
+	if err != nil {
+		fmt.Println(err)
+		return "something went wrong"
+	}
+	return string(jsonStu_i)
 
 }
