@@ -3,9 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Fooooooooooox/foooox"
-
-	"rsc.io/quote"
+	"github.com/Fooooooooooox/go_learning_booking_app/foooox"
 )
 
 func main() {
@@ -22,7 +20,6 @@ func main() {
 	fmt.Printf("conferenceName is %T\n", conferenceName)
 
 	fmt.Println(foooox.Bestfoooox())
-	fmt.Println(quote.Go())
 
 	fmt.Printf("welcome to %v booking application\n", conferenceName)
 	fmt.Printf("we have total of %vtickets\n", conferenceTickets)
