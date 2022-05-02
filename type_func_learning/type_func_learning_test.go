@@ -6,11 +6,6 @@ import (
 	"testing"
 )
 
-// func ReturnX(t *testing.T) {
-// 	TestX := big_learning.Returnsomething()
-// 	t.Log(TestX)
-// }
-
 //定义函数类型
 type TestHandler func(name string) int
 
