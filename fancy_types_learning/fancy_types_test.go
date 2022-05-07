@@ -35,6 +35,10 @@ func TestBigint(t *testing.T) {
 // fancy_types_test.go:27: 2188824200011112223
 // fancy_types_test.go:28: true
 
+func TestStar(t *testing.T) {
+
+}
+
 // iota最朴素的用法
 func TestIota(t *testing.T) {
 	const (
