@@ -44,3 +44,7 @@ func (st *Stack) Pop() (ret uint256.Int) {
 func (st *Stack) Len() int {
 	return len(st.data)
 }
+
+func (st *Stack) Peek() *uint256.Int {
+	return &st.data[st.Len()-1]
+}

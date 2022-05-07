@@ -22,6 +22,19 @@ func TestBig(t *testing.T) {
 
 }
 
+func TestBigint(t *testing.T) {
+	var big, whathehell = new(big.Int).SetString("2188824200011112223", 10)
+	t.Log(big)
+	t.Log(whathehell)
+}
+
+// 从string创建一个bigint
+// 第二个参数是true
+// 如果我传入的string无法被转换为bigint这个参数的值就是false
+// === RUN   TestBigint
+// fancy_types_test.go:27: 2188824200011112223
+// fancy_types_test.go:28: true
+
 // iota最朴素的用法
 func TestIota(t *testing.T) {
 	const (
