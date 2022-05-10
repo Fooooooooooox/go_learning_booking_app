@@ -1,6 +1,7 @@
 package fancy_types_test
 
 import (
+	"fmt"
 	"math/big"
 	"testing"
 )
@@ -68,4 +69,20 @@ func TestPrint(t *testing.T) {
 	t.Log(PUSH2)
 	t.Log(PUSH3)
 	t.Log(PUSH4)
+}
+
+func Sum(nums ...int) int {
+	res := 0
+	for _, n := range nums {
+		res += n
+	}
+	fmt.Println(res)
+	return res
+}
+
+func TestVariadic(t *testing.T) {
+	Sum(1)
+	Sum(1, 2, 3)
+	primes := []int{2, 3, 5, 7}
+	Sum(primes...)
 }
