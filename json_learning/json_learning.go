@@ -3,11 +3,24 @@ package json_learning
 import (
 	"encoding/json"
 	"fmt"
+
+	"github.com/ethereum/go-ethereum/common"
 )
+
+// struct有点像python里的类型 class
+// struct里的元素如果加上了json tag可以在将struct转换为json的时候作为json的键
 
 // ``里的是json tag json tag主要在struct与json数据转换的过程(Marshal/Unmarshal)中使用。
 
 // 参考https://blog.csdn.net/xz_studying/article/details/106012535
+
+type Snap struct {
+	Number  uint64                      `json:"number"`
+	Hash    common.Hash                 `json:"hash"`
+	singers map[common.Address]struct{} `json:"signers"`
+}
+
+// 不过这里的空struct是用来做啥的呢？
 
 type Stu struct {
 	Name  string `json:"name"`
