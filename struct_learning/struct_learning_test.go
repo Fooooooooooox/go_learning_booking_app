@@ -127,7 +127,11 @@ func TestMem(t *testing.T) {
 	t.Log(mem)
 	t.Log(mem.store)
 	t.Log(mem.lastGasCost)
-	mem.store = []byte("hahaha up up and away")
+	// mem.store = []byte("hahaha up up and away")
+	// 可以写成这样多个字符串的：
+	// 不过只能单个单个的，如果你填了两位的就会报错：byte is an alias for uint8 and is equivalent to uint8 in all ways. It is used, by convention, to distinguish byte values from 8-bit unsigned integer values.
+	// 因为byte只能表示uint8
+	mem.store = []byte{'9', 'b', 'c', 'd', 'e'}
 	mem.lastGasCost = 6
 	t.Log(mem)
 	t.Log(mem.store)
