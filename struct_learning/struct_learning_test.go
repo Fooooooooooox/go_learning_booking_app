@@ -109,3 +109,28 @@ func TestSta(t *testing.T) {
 	fmt.Println(stats)
 	fmt.Println(stats.cnt, stats.category["aa"].event["bb"].value)
 }
+
+type Memory struct {
+	store       []byte
+	lastGasCost uint64
+}
+
+// NewMemory returns a new memory model.
+func NewMemory() *Memory {
+	return &Memory{}
+}
+
+func TestMem(t *testing.T) {
+	var (
+		mem = NewMemory()
+	)
+	t.Log(mem)
+	t.Log(mem.store)
+	t.Log(mem.lastGasCost)
+	mem.store = []byte("hahaha up up and away")
+	mem.lastGasCost = 6
+	t.Log(mem)
+	t.Log(mem.store)
+	t.Log(mem.lastGasCost)
+
+}
