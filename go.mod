@@ -17,6 +17,8 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/gnostic v0.5.7-v3refs // indirect
 	github.com/mailru/easyjson v0.0.0-20190626092158-b2ccc519800e // indirect
+	github.com/patrickmn/go-bloom v0.0.0-20120528014648-4ab62f5a40bf // indirect
+	github.com/pmylund/go-bitset v0.0.0-20120712110920-d72c4b165e1a // indirect
 	golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2 // indirect
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
 	golang.org/x/sys v0.0.0-20210816183151-1e6c022a8912 // indirect
